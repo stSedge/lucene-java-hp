@@ -15,7 +15,8 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("org.apache.lucene:lucene-core:8.11.3")
     implementation("org.apache.lucene:lucene-analyzers-common:8.11.3")
-
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation("org.json:json:20231013")
     implementation("org.apache.lucene:lucene-queryparser:8.11.3")
     implementation("org.apache.lucene:lucene-suggest:8.11.3")
     implementation("com.google.code.gson:gson:2.10.1")

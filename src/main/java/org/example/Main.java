@@ -1,5 +1,7 @@
 package org.example;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Scanner;
 
 import static org.example.SpellIndexer.buildSpellIndex;
@@ -31,5 +33,14 @@ public class Main {
         }
 
         scanner.close();
+
+        /*try (BufferedReader reader = new BufferedReader(new FileReader("q.txt"))) {
+            String query;
+            while ((query = reader.readLine()) != null) {
+                query = query.trim();
+                if (query.isEmpty()) continue;
+                searcher.search(query, 10);
+            }
+        }*/
     }
 }
