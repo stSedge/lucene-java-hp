@@ -20,6 +20,9 @@ public class Main {
         Search searcher = new Search(INDEX_PATH);
         Scanner scanner = new Scanner(System.in);
 
+        KG kg = KG.load("triplets.txt");
+        kg.loadEmbeddings("triplets_emb.json");
+
         while (true) {
             System.out.println("\nВведите запрос или 0 для выхода");
             String userInput = scanner.nextLine();
@@ -29,7 +32,7 @@ public class Main {
             if (userInput.isBlank()) {
                 continue;
             }
-            searcher.search(userInput, 10);
+            searcher.search(userInput, 10, kg);
         }
 
         scanner.close();
